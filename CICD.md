@@ -103,3 +103,115 @@ Here is the console output:
 
 
 
+## Multi-stage build - pipeline
+
+Follow the steps as previous, but in the `Build`, type:
+
+```
+date
+```
+
+![Alt text](images/Screenshot%202023-05-30%20143710.png)
+
+Save and run, select `Console Output`.
+
+![Alt text](images/Screenshot%202023-05-30%20143803.png)
+
+Results in:
+
+![Alt text](images/Screenshot%202023-05-30%20143940.png)
+
+navigate to the old build, and select `Post-build actions`.
+
+![Alt text](images/Screenshot%202023-05-30%20144132.png)
+
+select the right build;
+
+![Alt text](images/Screenshot%202023-05-30%20144227.png)
+
+and run,
+
+Successfully automated a pipeline!
+
+
+
+## linking key from Github to Jenkins
+
+Navigate to the `app` folder on Github. Select Settings -> Deploy keys -> add key. Follow it through, adding the keys and names. 
+
+remember to make an actual key on our local drive we have to run the following:
+
+`cd` into `.ssh` and run:
+
+```
+ ssh-keygen -t rsa -C "masum-jenkins"
+```
+
+name it and we can use `cat` to look into the keys. 
+
+Then, on Jenkins, create a new build with these settings:
+
+![Alt text](images/Screenshot%202023-05-30%20150210.png)
+
+add a new key:
+
+![Alt text](images/Screenshot%202023-05-30%20152106.png)
+
+![Alt text](images/Screenshot%202023-05-30%20152128.png)
+
+![Alt text](images/Screenshot%202023-05-30%20150246.png)
+
+![Alt text](images/Screenshot%202023-05-30%20150301.png)
+
+After launching and deploying, i realaised the `cd app` command was causing an error, so i got rid of it;
+
+```
+npm install
+npm test
+```
+
+the console resulted in:
+
+![Alt text](images/Screenshot%202023-05-30%20150656.png)
+
+![Alt text](images/Screenshot%202023-05-30%20150728.png)
+
+The private key has been added to jenkins!
+
+## 
+
+select `configure` and change these:
+
+In an effort not to modify the mster node, we use this:
+
+![Alt text](images/Screenshot%202023-05-30%20152947.png)
+
+Change the triggers:
+
+![Alt text](images/Screenshot%202023-05-30%20153030.png)
+
+Run it and.....
+
+![Alt text](images/Screenshot%202023-05-30%20153703.png)
+
+success!
+
+## Adding a new webhook
+
+on github, i naviagated to the `app` repo.
+
+and putted i n my Payload URL:
+
+```
+http://3.9.13.91:8080/github-webhook/
+```
+
+Follow these settings:
+
+![Alt text](images/Screenshot%202023-05-30%20161326.png)
+
+i rechecked my Git credentials. 
+
+
+
+
