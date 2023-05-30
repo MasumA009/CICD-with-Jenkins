@@ -19,7 +19,7 @@ Most software releases go through a couple of typical stages:
 
 # Jenkins
 
-Jenkins is an open-source automation server that helps in automating various tasks in software development, including building, testing, and deploying applications. enkins allows developers to automate repetitive tasks and facilitates collaboration within a development team.
+Jenkins is an open-source automation server that helps in automating various tasks in software development, including building, testing, and deploying applications. Jenkins allows developers to automate repetitive tasks and facilitates collaboration within a development team.
 
 Typical stages are:
 
@@ -39,8 +39,13 @@ More specifically, the stages we covered are:
 # Other tools
 
 1. GitLab CI/CD: GitLab provides an integrated CI/CD solution that is tightly integrated with its source code management platform.
+
 2. CircleCI: CircleCI is a CI/CD platform that supports running jobs in Linux, macOS, and Windows environments.
+
 3. TeamCity: TeamCity is a powerful CI/CD server developed by JetBrains, which supports a wide range of build and deployment configurations.
+
+4. Azure DevOps: Azure DevOps (formerly known as Visual Studio Team Services) is a comprehensive set of development tools provided by Microsoft. It offers a range of CI/CD capabilities, including build pipelines, release management, and deployment automation.
+
 
 
 # Implementing:
@@ -73,6 +78,12 @@ uname -a
 ```
 
 Apply and save it.
+
+NOTE: We can edit it via `Confgure` :
+
+![Alt text](images/Screenshot%202023-05-30%20125841.png)
+
+
 
 navigate to `Build Now`, this essentially launches it:
 
