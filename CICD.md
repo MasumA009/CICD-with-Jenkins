@@ -1,15 +1,21 @@
 # CICD
 
-Continous integration, continous delivery. CDE = continous development
+Continous integration, continous delivery.
 
 continous integeration helps engineers, devs  and everyone collaborate together. 
 
 webhook triggger: an automatic type of trigger that listens for a certain type of data, much like event triggers.
 
-CICD stands for Continuous Integration and Continuous Deployment (or Continuous Delivery). It is a set of practices and processes used in software development to automate the building, testing, and deployment of applications
+CICD stands for Continuous Integration and Continuous Deployment (or Continuous Delivery). It is a set of practices and processes used in software development to automate the building, testing, and deployment of applications (more can be read here at semaphoreci)[https://semaphoreci.com/blog/cicd-pipeline].
 
-![Alt text](images/Screenshot%202023-05-30%20121126.png)
 
+Most software releases go through a couple of typical stages:
+![Alt text](images/cicd-pipeline-introduction-1024x422-1.jpg)
+
+1. In most cases, a pipeline run is triggered by a source code repository. A change in code triggers a notification to the CI/CD tool, which runs the corresponding pipeline.
+2. We combine the source code and its dependencies to build a runnable instance of our product that we can potentially ship to our end users.
+3. we run automated tests to validate our code’s correctness and the behavior of our product.
+4. Once we have a built a runnable instance of our code that has passed all predefined tests, we’re ready to deploy it. There are usually multiple deploy environments.
 
 # Jenkins
 
@@ -84,15 +90,5 @@ Here is the console output:
 
 ![Alt text](images/Screenshot%202023-05-30%20122653.png)
 
-## Multi-stage build, pipelines
 
-## execute shell of Jenkins
-
-## Jenkins Enviornment
-
-## Node environnment in Jenkins
-
-## "file.pem" store in Jenkins
-
-## "tech230-masum-Jenkins" store in Jenkins
 
