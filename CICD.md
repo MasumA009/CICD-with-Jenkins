@@ -28,7 +28,7 @@ Typical stages are:
 3. deploying to a staging environment, 
 4. deploying to production
 
-The stages we covered are:
+More specifically, the stages we covered are:
 
 1. the Multi-stage build, pipelines
 2. The execution of shell
