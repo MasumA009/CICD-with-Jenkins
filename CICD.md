@@ -15,12 +15,20 @@ CICD stands for Continuous Integration and Continuous Deployment (or Continuous 
 
 Jenkins is an open-source automation server that helps in automating various tasks in software development, including building, testing, and deploying applications. enkins allows developers to automate repetitive tasks and facilitates collaboration within a development team.
 
-Typical satges are:
+Typical stages are:
 
 1. building the application, 
 2. running tests, 
 3. deploying to a staging environment, 
 4. deploying to production
+
+The stages we covered are:
+
+1. the Multi-stage build, pipelines
+2. The execution of shell
+3. creation of enviornment variables, (Jenkins Enviornment and Node)
+4. Store files in Jenkins, ( "file.pem" and "tech230-masum-Jenkins" )
+
 
 # Other tools
 
