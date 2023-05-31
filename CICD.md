@@ -293,7 +293,4 @@ Success!
 
 
 
- CI runs the test, runs the testa nd automatio of the SDLC
-
-
 
