@@ -67,6 +67,11 @@ ensure these are selected:
 
 ![Alt text](images/Screenshot%202023-05-30%20121757.png)
 
+include this:
+
+![Alt text](images/Screenshot%202023-05-31%20142513.png)
+
+
 Scroll down to `Build` and select `Execute Shell`: 
 
 ![Alt text](images/Screenshot%202023-05-30%20121853.png)
@@ -200,7 +205,7 @@ success!
 
 on github, i naviagated to the `app` repo.
 
-and putted i n my Payload URL:
+and putted in my Payload URL:
 
 ```
 http://3.9.13.91:8080/github-webhook/
@@ -211,6 +216,58 @@ Follow these settings:
 ![Alt text](images/Screenshot%202023-05-30%20161326.png)
 
 i rechecked my Git credentials. 
+
+
+## Setting up prodution enviornment 
+
+Create a new instance with these sg:
+
+![Alt text](images/Screenshot%202023-05-31%20110943.png)
+
+Now the prduction line has been setup. 
+
+## new Jenkins build
+
+First of all, i had to create a new `dev` branch, it was done by:
+
+```
+git branch dev
+```
+
+I created a new build o Jenkins, following the same steps as above. 
+
+the difference was:
+
+![Alt text](images/Screenshot%202023-05-31%20114904.png)
+
+the `Branch specifier` was `dev`. 
+
+I also added this merge before buld:
+
+![Alt text](images/Screenshot%202023-05-31%20115008.png)
+
+and then in the build itself;
+
+![Alt text](images/Screenshot%202023-05-31%20115037.png)
+
+ran with no issues!
+
+![Alt text](images/Screenshot%202023-05-31%20115110.png)
+
+![Alt text](images/Screenshot%202023-05-31%20115125.png)
+
+## pushing to prodution
+
+Launch a production line instance:
+
+![Alt text](images/Screenshot%202023-05-31%20140501.png)
+
+Create a new build on Jenkins with the same initial requirments:
+
+![Alt text](images/Screenshot%202023-05-31%20142804.png)
+
+![Alt text](images/Screenshot%202023-05-31%20142513.png)
+
 
 
 
