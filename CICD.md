@@ -295,10 +295,32 @@ Launch a production line instance:
 
 Create a new build on Jenkins with the same initial requirments:
 
-![Alt text](images/Screenshot%202023-05-31%20142804.png)
+Note, i had to move my `app` folder to another repo, this included changing every job on jenkins.
 
-![Alt text](images/Screenshot%202023-05-31%20142513.png)
+![Alt text](more-images/Screenshot%202023-05-31%20163817.png)
 
+![Alt text](more-images/Screenshot%202023-05-31%20164138.png)
+
+![Alt text](more-images/Screenshot%202023-05-31%20164200.png)
+
+![Alt text](more-images/Screenshot%202023-05-31%20164224.png)
+
+Under `Execute Shell`:
+
+```
+rsync -avz -e "ssh -o StrictHostKeyChecking=no" app ubuntu@ec2-54-194-35-201.eu-west-1.compute.amazonaws.com:/home/ubuntu
+ssh -o "StrictHostKeyChecking=no" ubuntu@ec2-54-194-35-201.eu-west-1.compute.amazonaws.com <<EOF
+    sudo bash ./app/provsion.sh
+    cd /home/ubuntu/app
+    npm install
+    pm2 kill
+    pm2 start app.js
+EOF
+```
+
+Success!
+
+![Alt text](more-images/Screenshot%202023-05-31%20163653.png)
 
 Dry run testing:
 
