@@ -269,6 +269,10 @@ Create a new build on Jenkins with the same initial requirments:
 ![Alt text](images/Screenshot%202023-05-31%20142513.png)
 
 
+Dry run testing:
+
+![Alt text](images/Screenshot%202023-05-31%20174229.png)
+
 
 
 
