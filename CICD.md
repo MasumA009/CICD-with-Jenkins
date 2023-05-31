@@ -226,29 +226,60 @@ Create a new instance with these sg:
 
 Now the prduction line has been setup. 
 
-## new Jenkins build
+##  CI segment: new Jenkins build
 
-First of all, i had to create a new `dev` branch, it was done by:
+Create a new Build, im naming mine `Masum-ci`.
+
+Input the correct Github link, i had to copy mine over to a repo for it to corrrectly work:
+
+![Alt text](images-more/Screenshot%202023-05-31%20175432.png)
+
+Next, add restriction:
+
+this:
+ 
+ ![Alt text](images-more/Screenshot%202023-05-31%20175612.png)
+
+
+ i also  had to create a new `dev` branch, it was done by running:
 
 ```
 git branch dev
 ```
 
+In the terminal
+
+
 I created a new build o Jenkins, following the same steps as above. 
 
 the difference was:
 
-![Alt text](images/Screenshot%202023-05-31%20114904.png)
+![Alt text](images-more/Screenshot%202023-05-31%20175711.png)
 
 the `Branch specifier` was `dev`. 
 
-I also added this merge before buld:
+We can find how to add keys above^.
 
-![Alt text](images/Screenshot%202023-05-31%20115008.png)
+
+Select the `Github trigger`:
+
+![Alt text](images-more/Screenshot%202023-05-31%20175815.png)
+
+ensure you select `Provide Node... `
+
+![Alt text](images-more/Screenshot%202023-05-31%20175919.png)
+
+Under the build:
+
+![Alt text](images-more/Screenshot%202023-05-31%20175955.png)
+
 
 and then in the build itself;
 
-![Alt text](images/Screenshot%202023-05-31%20115037.png)
+under post actions:
+
+![Alt text](images-more/Screenshot%202023-05-31%20180057.png)
+
 
 ran with no issues!
 
