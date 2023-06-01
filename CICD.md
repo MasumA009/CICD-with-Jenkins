@@ -285,7 +285,45 @@ ran with no issues!
 
 ![Alt text](images/Screenshot%202023-05-31%20115110.png)
 
-![Alt text](images/Screenshot%202023-05-31%20115125.png)
+## merge segment
+
+in this part we will merge our dev branch wit master, this allows any chances that happen locally to be copied into master branch automatiaclly.
+
+We need to ensure our webhook is working first:
+
+Navigate to the app location on GIT, and chehck:
+
+![Alt text](images-more/Screenshot%202023-06-01%20092409.png)
+
+just like before, set-up a new build with these options:
+
+![Alt text](images-more/Screenshot%202023-06-01%20091833.png)
+
+The project URL is the same as we've been using,
+
+add the restriction:
+
+![Alt text](images-more/Screenshot%202023-06-01%20091943.png)
+
+Add the Git repo:
+
+![Alt text](images-more/Screenshot%202023-06-01%20092020.png)
+
+under additional behaviours:
+
+![Alt text](images-more/Screenshot%202023-06-01%20092050.png)
+
+I didnt change anything on `Build triggers`, or `build enviornment`.
+
+under post-build:
+
+NOTE: We only add this after the production has been created. 
+
+![Alt text](images-more/Screenshot%202023-06-01%20092154.png)
+
+Finally:
+
+![Alt text](images-more/Screenshot%202023-06-01%20092233.png)
 
 ## pushing to prodution
 
@@ -297,11 +335,17 @@ Create a new build on Jenkins with the same initial requirments:
 
 Note, i had to move my `app` folder to another repo, this included changing every job on jenkins.
 
+As we have been doing:
+
 ![Alt text](more-images/Screenshot%202023-05-31%20163817.png)
 
 ![Alt text](more-images/Screenshot%202023-05-31%20164138.png)
 
+NOTE: this time we use `master` rather than `dev`
+
 ![Alt text](more-images/Screenshot%202023-05-31%20164200.png)
+
+We include NodeJS and allow SSH,
 
 ![Alt text](more-images/Screenshot%202023-05-31%20164224.png)
 
@@ -323,6 +367,8 @@ Success!
 ![Alt text](more-images/Screenshot%202023-05-31%20163653.png)
 
 Dry run testing:
+
+By making a change locally, pushing it to GITHUB, and it automatically update the master repo and thereafter the Posts page:
 
 ![Alt text](images/Screenshot%202023-05-31%20174229.png)
 
