@@ -154,6 +154,12 @@ remember to make an actual key on our local drive we have to run the following:
 
 name it and we can use `cat` to look into the keys. 
 
+### Adding public key to Github
+
+we need to give Github our public key, do this by navigating to setting -> `Deploy keys` -> `add key`
+
+![Alt text](images-more/Screenshot%202023-06-01%20093250.png)
+
 Then, on Jenkins, create a new build with these settings:
 
 ![Alt text](images/Screenshot%202023-05-30%20150210.png)
